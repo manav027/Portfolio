@@ -14,7 +14,8 @@ body{
     height: 100vh;
     background-image: url(images/background.png);
     background-size: cover;
-    background-position: center;
+    background-position: right;
+    background-repeat: no-repeat;
 }
 .container{
     padding: 10px 10%;
@@ -330,12 +331,26 @@ nav .fa{
 #bars{
     display: none !important;
 }
+@media only screen and (min-width: 601px) and (max-width: 1024px){
+    #header{
+        position: relative;
+    }
+
+    .header-text{
+        position: absolute;
+        bottom: 10%;
+        background-color: rgba(0,0,0,0.1);
+        
+    }
+}
 @media only screen and (max-width: 600px){
     #header{
         background-image: url(images/phone-background.png);
+        position: relative;
     }
     .header-text{
-        margin-top: 100%;
+       position: absolute;
+       bottom: 10%;
         font-size: 16px;
     }
     .header-text h1{
